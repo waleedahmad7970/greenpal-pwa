@@ -3,19 +3,26 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { tap } from "@/lib/haptics";
-import { HomeIcon, MachineIcon, MenuIcon, PinIcon, SettingsIcon } from "./Icons";
+import {
+  HomeIcon,
+  MachineIcon,
+  MenuIcon,
+  PinIcon,
+  SettingsIcon,
+} from "./Icons";
 
 const tabs = [
   { href: "/menu", label: "Menu", Icon: MenuIcon },
-  { href: "/machines", label: "Machines", Icon: MachineIcon },
+  // { href: "/machines", label: "Stations", Icon: MachineIcon },
   { href: "/", label: "Home", Icon: HomeIcon },
-  { href: "/locations", label: "Map", Icon: PinIcon },
+  // { href: "/locations", label: "Map", Icon: PinIcon },
   { href: "/settings", label: "Settings", Icon: SettingsIcon },
 ];
 
 export default function BottomNav() {
   const pathname = usePathname();
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <nav
