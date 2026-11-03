@@ -13,9 +13,9 @@ import {
 
 const tabs = [
   { href: "/menu", label: "Menu", Icon: MenuIcon },
-  // { href: "/machines", label: "Stations", Icon: MachineIcon },
+  { href: "/machines", label: "Stations", Icon: MachineIcon },
   { href: "/", label: "Home", Icon: HomeIcon },
-  // { href: "/locations", label: "Map", Icon: PinIcon },
+  { href: "/location", label: "Map", Icon: PinIcon },
   { href: "/settings", label: "Settings", Icon: SettingsIcon },
 ];
 
@@ -43,7 +43,7 @@ export default function BottomNav() {
                   aria-current={active ? "page" : undefined}
                   onClick={() => tap()}
                   className={`-translate-y-6 flex items-center justify-center w-[68px] h-[68px] rounded-full bg-signal text-ink border-[5px] border-[rgb(var(--bg))] shadow-[0_6px_16px_rgba(2,214,131,0.45)] active:scale-90 transition-transform duration-200 ${
-                    active ? "scale-110" : ""
+                    active ? "ring-4 ring-signal/30" : ""
                   }`}
                 >
                   <Icon className="w-7 h-7" />
@@ -59,16 +59,10 @@ export default function BottomNav() {
                 aria-current={active ? "page" : undefined}
                 onClick={() => tap()}
                 className={`flex flex-col items-center justify-center gap-1 h-full text-[10px] font-semibold leading-none transition-colors duration-200 active:scale-90 ${
-                  active ? "text-[rgb(var(--fg))]" : "text-muted"
+                  active ? "accent" : "text-muted"
                 }`}
               >
-                <span
-                  className={`flex items-center justify-center w-11 h-7 rounded-full transition-colors duration-200 ${
-                    active ? "bg-signal/25" : ""
-                  }`}
-                >
-                  <Icon className="w-[22px] h-[22px]" />
-                </span>
+                <Icon className="w-[22px] h-[22px]" />
                 {label}
               </Link>
             </li>
