@@ -3,7 +3,7 @@
 export type Slot = {
   id: number;
   state: "in" | "out";
-  battery?: number; // % when the bank is in the machine
+  battery?: number; // % when the bank is in the station
   minutesOut?: number; // minutes since rented when it is out
 };
 

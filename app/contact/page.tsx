@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   description: "Partner with Greenpal or ask us anything.",
 };
 
-const btn = "flex items-center gap-3 rounded-2xl border border-rule bg-card p-4 font-medium active:scale-[0.99] transition-transform";
+const btn = "deco-card flex items-center gap-3 p-4 font-medium active:scale-[0.99] transition-transform";
 
 export default function ContactPage() {
   return (
-    <div className="px-5 pt-6 ">
+    <div className="px-5 page-top ">
       <h1 className="font-display text-3xl font-bold">Get in touch</h1>
       <p className="mt-2 text-muted">Partner with us on a station, or just ask a question.</p>
 

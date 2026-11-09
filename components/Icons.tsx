@@ -43,3 +43,21 @@ export const SearchIcon = ({ className = "w-5 h-5" }: P) => (
 export const BoltIcon = ({ className = "w-5 h-5" }: P) => (
   <svg className={className} {...base}><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg>
 );
+export const ClockIcon = ({ className = "w-5 h-5" }: P) => (
+  <svg className={className} {...base}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+);
+export const RepeatIcon = ({ className = "w-5 h-5" }: P) => (
+  <svg className={className} {...base}><path d="M17 2l4 4-4 4" /><path d="M3 11V9a3 3 0 0 1 3-3h15" /><path d="M7 22l-4-4 4-4" /><path d="M21 13v2a3 3 0 0 1-3 3H3" /></svg>
+);
+export const CardIcon = ({ className = "w-5 h-5" }: P) => (
+  <svg className={className} {...base}><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6 15h4" /></svg>
+);
+export const ArrowIcon = ({ className = "w-4 h-4" }: P) => (
+  <svg className={className} {...base}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
+export const ScanIcon = ({ className = "w-5 h-5" }: P) => (
+  <svg className={className} {...base}><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2" /><path d="M8 12h8" /></svg>
+);
+export const BatteryIcon = ({ className = "w-5 h-5" }: P) => (
+  <svg className={className} {...base}><rect x="3" y="7" width="16" height="10" rx="2.5" /><path d="M21 11v2M11 9.5l-2 2.5h4l-2 2.5" /></svg>
+);

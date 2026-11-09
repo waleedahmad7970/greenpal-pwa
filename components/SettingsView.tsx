@@ -32,13 +32,13 @@ function Switch({ on, onChange, label }: { on: boolean; onChange: (v: boolean) =
 }
 
 export default function SettingsView() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [haptics, setHaptics] = useState(true);
   const [installEvent, setInstallEvent] = useState<InstallEvent | null>(null);
   const [cleared, setCleared] = useState(false);
 
   useEffect(() => {
-    setDark(document.documentElement.getAttribute("data-theme") !== "light");
+    setDark(document.documentElement.getAttribute("data-theme") === "dark");
     try {
       setHaptics(localStorage.getItem(HAPTICS_KEY) !== "off");
     } catch {}
@@ -81,7 +81,7 @@ export default function SettingsView() {
 
   return (
     <>
-      <div className="mt-5 rounded-2xl border border-rule bg-card divide-y divide-[rgb(var(--line))]">
+      <div className="mt-5 deco-card divide-y divide-[rgb(var(--line))]">
         <Row title="Dark theme" hint="Matches the Greenpal website">
           <Switch on={dark} onChange={setTheme} label="Dark theme" />
         </Row>
@@ -90,7 +90,7 @@ export default function SettingsView() {
         </Row>
       </div>
 
-      <div className="mt-4 rounded-2xl border border-rule bg-card divide-y divide-[rgb(var(--line))]">
+      <div className="mt-4 deco-card divide-y divide-[rgb(var(--line))]">
         <Row title="Install app" hint={installEvent ? "Add Greenpal to your home screen" : "Use your browser menu → Add to Home screen"}>
           <button
             disabled={!installEvent}
